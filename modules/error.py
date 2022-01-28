@@ -1,0 +1,60 @@
+def payload():
+    test=[
+    "'",
+    '"',
+    '%27',
+    '%22',
+    "')",
+    "';",
+    '\"',
+    '\")',
+    '\";',
+    '\"\"',
+    ")",
+    "`;",
+    "\\",
+    "%27",
+    "%%2727",
+    "%25%27",
+    "%60",
+    "%5C"]
+    return test
+
+def sig():
+    sql_errors = [
+    "Warning: mysqli_fetch_assoc()"
+    "Incorrect syntax near",
+    "You have an error in your SQL syntax",
+    "supplied argument is not a valid MySQL",
+    "mysql_fetch_array() expects parameter 1 to be resource, boolean given in",
+    "java.sql.SQLException: Syntax error or access violation",
+    "java.sql.SQLException: Unexpected end of command",
+    "PostgreSQL query failed: ERROR: parser:",
+    "XPathException",
+    "Warning: SimpleXMLElement::xpath():",
+    "[Microsoft][ODBC SQL Server Driver]",
+    "Microsoft OLE DB Provider for ODBC Drivers",
+    "[Microsoft][ODBC Microsoft Access Driver]",
+    "supplied argument is not a valid ldap",
+    "DB2 SQL error:",
+    "Interbase Injection",
+    "Sybase message:",
+    "Unclosed quotation mark after the character string",
+    "Incorrect syntax near",
+    r"Warning: SQLite3:*"
+    r"SQL syntax.*MySQL", r"Warning.*mysql_.*", r"MySQL Query fail.*", r"SQL syntax.*MariaDB server",
+    r"PostgreSQL.*ERROR", r"Warning.*\Wpg_.*", r"Warning.*PostgreSQL",
+    r"OLE DB.* SQL Server", r"(\W|\A)SQL Server.*Driver", r"Warning.*odbc_.*", r"Warning.*mssql_", r"Msg \d+, Level \d+, State \d+", r"Unclosed quotation mark after the character string", r"Microsoft OLE DB Provider for ODBC Drivers",
+    r"Microsoft Access Driver", r"Access Database Engine", r"Microsoft JET Database Engine", r".*Syntax error.*query expression",
+    r"\bORA-[0-9][0-9][0-9][0-9]", r"Oracle error", r"Warning.*oci_.*", "Microsoft OLE DB Provider for Oracle",
+    r"CLI Driver.*DB2", r"DB2 SQL error",
+    r"SQLite/JDBCDriver", r"System.Data.SQLite.SQLiteException",
+    r"Warning.*ibase_.*", r"com.informix.jdbc",
+    r"Warning.*sybase.*", r"Sybase message",
+    "mysql_num_rows()",
+    "supplied argument is not a valid MySQL",
+    "mysqli_fetch_object()",
+    "mysqli_error()",
+    "syntax error",
+    "Error: You have an error in your SQL syntax;"]
+    return sql_errors
